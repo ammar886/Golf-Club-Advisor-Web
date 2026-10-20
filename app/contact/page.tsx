@@ -70,7 +70,7 @@ export default function ContactPage() {
   return (
     <div className="flex flex-col w-full">
       {/* 1. System Telemetry Status Banner */}
-      <section className="w-full bg-surface-container-low py-space-sm px-gutter-lg border-b border-border-subtle/40 pt-24 md:pt-28">
+      <section className="w-full bg-surface-container-low py-space-sm px-4 sm:px-6 md:px-gutter-lg border-b border-border-subtle/40 pt-24 md:pt-28">
         <div className="max-w-[1240px] mx-auto flex flex-col md:flex-row items-center justify-between gap-space-sm">
           <div className="flex items-center gap-space-sm text-on-surface-variant font-label-md text-label-md">
             <span className="inline-flex items-center justify-center w-2 h-2 rounded-full bg-fairway-green animate-pulse" />
@@ -98,7 +98,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. Main Editorial Header Area */}
-      <section className="relative w-full py-margin-md md:py-margin-lg px-gutter-lg overflow-hidden bg-background">
+      <section className="relative w-full py-margin-md md:py-margin-lg px-4 sm:px-6 md:px-gutter-lg overflow-hidden bg-background">
         <div
           aria-hidden="true"
           className="absolute right-0 top-0 -mr-24 -mt-24 w-96 h-96 rounded-full bg-surface-container-high/60 blur-3xl pointer-events-none"
@@ -157,7 +157,7 @@ export default function ContactPage() {
       </section>
 
       {/* 3. Split Contact Columns */}
-      <section className="w-full pb-margin-lg px-gutter-lg bg-background">
+      <section className="w-full pb-margin-lg px-4 sm:px-6 md:px-gutter-lg bg-background">
         <div className="max-w-[1240px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
           {/* Left Column: Commitment, Desks, Frequent Queries & Visual Banner */}
           <div className="lg:col-span-5 flex flex-col gap-space-lg">

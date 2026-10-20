@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function PrivacyPolicyPage() {
   return (
     <div className="w-full bg-background min-h-screen pt-24 md:pt-28 pb-margin-lg">
-      <div className="max-w-3xl mx-auto px-gutter-lg text-text-primary">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-gutter-lg text-text-primary">
         {/* Header */}
         <div className="pb-space-md mb-space-lg border-b border-border-subtle/50">
           <span className="font-label-sm text-label-sm text-fairway-green uppercase font-bold tracking-widest block mb-1">

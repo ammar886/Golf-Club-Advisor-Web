@@ -19,7 +19,7 @@ export default function Footer() {
   return (
     <>
       <footer className="w-full bg-surface-container-low text-on-surface py-margin-lg shadow-[0_-1px_8px_rgba(15,23,42,0.02)] border-t border-border-subtle/50">
-        <div className="max-w-[1240px] mx-auto px-gutter-lg">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-space-xl pb-space-xl">
             {/* Col 1: Brand Info */}
             <div className="md:col-span-5 flex flex-col gap-space-md">

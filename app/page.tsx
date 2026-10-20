@@ -18,7 +18,7 @@ export default function HomePage() {
         <div aria-hidden="true" className="pointer-events-none absolute -top-40 right-[-10%] w-[680px] h-[680px] rounded-full bg-secondary-container/25 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute top-1/2 left-[-15%] w-[520px] h-[520px] rounded-full bg-surface-container-high/40 blur-3xl" />
 
-        <div className="max-w-[1240px] mx-auto px-gutter-lg relative">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 
             {/* Left: editorial content */}
@@ -75,47 +75,97 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: phone mockup showcase */}
-            <div className="lg:col-span-5 relative flex justify-center items-center py-space-md">
-              <div className="absolute w-80 h-80 rounded-full bg-secondary-fixed/30 filter blur-2xl" />
-              <div className="relative w-full max-w-[480px] h-[580px] flex items-center justify-center">
-                {/* Secondary device — offset left */}
-                <div className="absolute -left-2 md:-left-6 top-8 w-[250px] md:w-[270px] bg-inverse-surface p-2.5 rounded-[36px] shadow-2xl transform -rotate-6 hover:-rotate-3 transition-transform duration-300 z-10">
+            {/* Right: phone mockup showcase - responsive for mobile & desktop */}
+            <div className="lg:col-span-5 relative flex flex-col justify-center items-center py-space-md">
+              <div className="absolute w-72 sm:w-80 h-72 sm:h-80 rounded-full bg-secondary-fixed/30 filter blur-2xl pointer-events-none" />
+
+              {/* Mobile Single Device Frame (< md) */}
+              <div className="md:hidden relative w-full max-w-[320px] flex flex-col items-center">
+                {/* Floating Rating Pill */}
+                <div className="absolute -top-3 z-30 whitespace-nowrap bg-surface-card px-space-md py-1 rounded-full shadow-md flex items-center gap-1.5 border border-border-subtle">
+                  <span className="material-symbols-outlined text-amber-500 text-[16px]" style={{ fontVariationSettings: "'FILL' 1" }}>
+                    star
+                  </span>
+                  <span className="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+                  <span className="font-body-sm text-[11px] text-text-muted">(12,000+ Verified Golfers)</span>
+                </div>
+
+                {/* Device Shell */}
+                <div className="w-full rounded-[32px] bg-inverse-surface p-2.5 shadow-2xl">
+                  <div className="w-full bg-surface-card rounded-[24px] overflow-hidden">
+                    <div className="h-5 bg-surface-card flex items-center justify-center">
+                      <div className="w-12 h-1 bg-outline-variant/60 rounded-full" />
+                    </div>
+                    <Image
+                      src="/images/mockup_app_2.png"
+                      alt="Golf Club Advisor Find Your Club mobile screen"
+                      width={300}
+                      height={600}
+                      className="w-full h-auto object-cover block"
+                      priority
+                    />
+                  </div>
+                </div>
+
+                {/* Mobile Quick Trust Indicators */}
+                <div className="w-full grid grid-cols-3 gap-2 mt-space-md text-center">
+                  <div className="flex flex-col items-center p-2 rounded-xl bg-surface-container-low border border-border-subtle/50">
+                    <span className="font-headline-sm text-[16px] text-fairway-green font-bold">4,200+</span>
+                    <span className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Courses</span>
+                  </div>
+                  <div className="flex flex-col items-center p-2 rounded-xl bg-surface-container-low border border-border-subtle/50">
+                    <span className="font-headline-sm text-[16px] text-primary font-bold">100%</span>
+                    <span className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Real Golfers</span>
+                  </div>
+                  <div className="flex flex-col items-center p-2 rounded-xl bg-surface-container-low border border-border-subtle/50">
+                    <span className="font-headline-sm text-[16px] text-flag-accent font-bold">Daily</span>
+                    <span className="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">News Feed</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Desktop / Tablet Dual Device Composition (>= md) */}
+              <div className="hidden md:flex relative w-full max-w-[480px] h-[580px] items-center justify-center">
+                {/* Secondary device — offset left (Top Stories News) */}
+                <div className="absolute -left-2 lg:-left-6 top-8 w-[250px] lg:w-[270px] bg-inverse-surface p-2.5 rounded-[36px] shadow-2xl transform -rotate-6 hover:-rotate-3 transition-transform duration-300 z-10">
                   <div className="w-full bg-surface-card rounded-[28px] overflow-hidden">
                     <div className="h-5 bg-surface-card flex items-center justify-center">
                       <div className="w-12 h-1 bg-outline-variant/50 rounded-full" />
                     </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV3DonzYzttLLV0ys06Okqbax0g4lZ-ZrQqxun9FqL43EgrWBd3YRi-Z8n_pop8PwDIEoHxuktRrnM6iATiX3lsQVhctyyqbEugRAtEIpw-6rl2vlplSmFI94Qcx0uVPaWhDsQ83S6VgbsNSjfvgcreiV3S76b3_PSVxmFiOGTRWXygjUax3X25QBoM8RMVd66Fy487oD2iF6nPR6Yar1Goss57dx57zS1kzIsZleTkfpUfg07sw"
+                    <Image
+                      src="/images/mockup_app_1.png"
                       alt="Golf Club Advisor Top Stories News Feed on mobile"
+                      width={270}
+                      height={550}
                       className="w-full h-auto object-cover block"
                     />
                   </div>
                 </div>
 
-                {/* Primary device — front right */}
-                <div className="absolute right-0 md:right-2 top-0 w-[270px] md:w-[295px] bg-inverse-surface p-2.5 rounded-[40px] shadow-2xl transform rotate-3 hover:rotate-1 transition-transform duration-300 z-20">
+                {/* Primary device — front right (Find your club) */}
+                <div className="absolute right-0 lg:right-2 top-0 w-[270px] lg:w-[295px] bg-inverse-surface p-2.5 rounded-[40px] shadow-2xl transform rotate-3 hover:rotate-1 transition-transform duration-300 z-20">
                   <div className="w-full bg-surface-card rounded-[32px] overflow-hidden">
                     <div className="h-6 bg-surface-card flex items-center justify-center">
                       <div className="w-16 h-1.5 bg-outline-variant/60 rounded-full" />
                     </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLqACZDc-hCGYT6ySeruF7ccMNSBwmLSoBRY2Ww9pA7zGm7HAHozS8WFXa0pkdcYK-2DsS3fcK-DhrfVqzcHN8yOFw0TFuEt_eZEF0PQZPPKIhuIMtJXd7-x5BocJd7muaTGeYeXpf4iKzn8iIroCDN16YCDzc-WGZZ3j8EmaoXjI6oQwaIi6Wme90KONAbQS-pYedohfu1QZ8RYL-qXL0-4VHG4epAlghpQOUaTAxBZPlA962Gw"
+                    <Image
+                      src="/images/mockup_app_2.png"
                       alt="Golf Club Advisor Find Your Club directory on mobile"
+                      width={295}
+                      height={600}
                       className="w-full h-auto object-cover block"
+                      priority
                     />
                   </div>
                 </div>
 
                 {/* Floating badge */}
-                <div className="absolute bottom-4 left-4 z-30 bg-surface-card/95 backdrop-blur-md px-space-md py-space-sm rounded-xl shadow-lg flex items-center gap-space-sm">
+                <div className="absolute bottom-4 left-4 z-30 bg-surface-card/95 backdrop-blur-md px-space-md py-space-sm rounded-xl shadow-lg flex items-center gap-space-sm border border-border-subtle">
                   <div className="w-8 h-8 rounded-full bg-secondary-container/50 flex items-center justify-center text-fairway-green">
                     <span className="material-symbols-outlined text-[18px]">verified</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="font-label-md text-label-md text-text-primary">Verified Green Condition</span>
+                    <span className="font-label-md text-label-md text-text-primary font-bold">Verified Green Condition</span>
                     <span className="font-body-sm text-[11px] text-text-muted">Updated today by 14 golfers</span>
                   </div>
                 </div>
@@ -127,7 +177,7 @@ export default function HomePage() {
 
       {/* ─── PROBLEM / SOLUTION ───────────────────────────────────────────── */}
       <section className="w-full py-margin-lg bg-surface-container-low/40">
-        <div className="max-w-[1240px] mx-auto px-gutter-lg">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 
             {/* Left: problem statement */}
@@ -218,7 +268,7 @@ export default function HomePage() {
 
       {/* ─── KEY FEATURES ─────────────────────────────────────────────────── */}
       <section className="w-full py-margin-lg bg-background" id="interactive-map">
-        <div className="max-w-[1240px] mx-auto px-gutter-lg flex flex-col gap-space-xl">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg flex flex-col gap-space-xl">
           {/* Section header */}
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
             <div className="flex flex-col gap-space-xs max-w-xl">
@@ -322,7 +372,7 @@ export default function HomePage() {
 
       {/* ─── HOW IT WORKS ─────────────────────────────────────────────────── */}
       <section className="w-full py-margin-lg bg-surface-container-low/30">
-        <div className="max-w-[1240px] mx-auto px-gutter-lg flex flex-col gap-space-xl">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg flex flex-col gap-space-xl">
           <div className="text-center max-w-2xl mx-auto flex flex-col gap-space-xs">
             <span className="font-label-sm text-label-sm text-fairway-green uppercase font-bold tracking-widest">Simple &amp; Rigorous</span>
             <h2 className="font-headline-lg text-headline-lg text-on-surface">How Golf Club Advisor Works</h2>
@@ -386,7 +436,7 @@ export default function HomePage() {
 
       {/* ─── PRODUCT GALLERY ──────────────────────────────────────────────── */}
       <section className="w-full py-margin-lg bg-background">
-        <div className="max-w-[1240px] mx-auto px-gutter-lg flex flex-col gap-space-xl">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg flex flex-col gap-space-xl">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
             <div>
               <span className="font-label-sm text-label-sm text-fairway-green uppercase font-bold tracking-widest">Interface Design</span>
@@ -409,10 +459,11 @@ export default function HomePage() {
               </div>
               <div className="w-full bg-surface-container-low rounded-xl p-space-md flex flex-col items-center justify-center">
                 <div className="max-w-[280px] w-full rounded-2xl overflow-hidden shadow-xl bg-surface-card">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLqACZDc-hCGYT6ySeruF7ccMNSBwmLSoBRY2Ww9pA7zGm7HAHozS8WFXa0pkdcYK-2DsS3fcK-DhrfVqzcHN8yOFw0TFuEt_eZEF0PQZPPKIhuIMtJXd7-x5BocJd7muaTGeYeXpf4iKzn8iIroCDN16YCDzc-WGZZ3j8EmaoXjI6oQwaIi6Wme90KONAbQS-pYedohfu1QZ8RYL-qXL0-4VHG4epAlghpQOUaTAxBZPlA962Gw"
+                  <Image
+                    src="/images/mockup_app_2.png"
                     alt="Find your club mobile view preview"
+                    width={280}
+                    height={580}
                     className="w-full h-auto block"
                   />
                 </div>
@@ -433,10 +484,11 @@ export default function HomePage() {
               </div>
               <div className="w-full bg-surface-container-low rounded-xl p-space-md flex flex-col items-center justify-center">
                 <div className="max-w-[280px] w-full rounded-2xl overflow-hidden shadow-xl bg-surface-card">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAV3DonzYzttLLV0ys06Okqbax0g4lZ-ZrQqxun9FqL43EgrWBd3YRi-Z8n_pop8PwDIEoHxuktRrnM6iATiX3lsQVhctyyqbEugRAtEIpw-6rl2vlplSmFI94Qcx0uVPaWhDsQ83S6VgbsNSjfvgcreiV3S76b3_PSVxmFiOGTRWXygjUax3X25QBoM8RMVd66Fy487oD2iF6nPR6Yar1Goss57dx57zS1kzIsZleTkfpUfg07sw"
+                  <Image
+                    src="/images/mockup_app_1.png"
                     alt="Top Stories golf news feed mobile screen preview"
+                    width={280}
+                    height={580}
                     className="w-full h-auto block"
                   />
                 </div>
@@ -451,7 +503,7 @@ export default function HomePage() {
 
       {/* ─── TESTIMONIALS ─────────────────────────────────────────────────── */}
       <section className="w-full py-space-xl bg-surface-container-low/40">
-        <div className="max-w-[1240px] mx-auto px-gutter-lg">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-space-md">
             {[
               {
@@ -498,7 +550,7 @@ export default function HomePage() {
 
       {/* ─── DOWNLOAD CTA ─────────────────────────────────────────────────── */}
       <section className="w-full py-margin-lg bg-background">
-        <div className="max-w-[1240px] mx-auto px-gutter-lg">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 md:px-gutter-lg">
           <div className="w-full bg-inverse-surface text-inverse-on-surface rounded-3xl p-space-xl md:p-margin-lg relative overflow-hidden shadow-2xl">
             {/* Decorative blobs */}
             <div className="pointer-events-none absolute -right-20 -bottom-20 w-[480px] h-[480px] rounded-full bg-primary/20 blur-3xl" />

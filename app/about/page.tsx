@@ -23,7 +23,7 @@ export default function AboutPage() {
           className="absolute top-1/2 -left-20 w-80 h-80 bg-secondary-fixed/25 rounded-full blur-3xl pointer-events-none"
         />
 
-        <div className="max-w-5xl mx-auto px-gutter-lg pt-space-lg">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-gutter-lg pt-space-lg">
           {/* Badge & Category Marker */}
           <div className="flex flex-wrap items-center gap-space-sm mb-space-md">
             <span className="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-secondary-container/50 text-fairway-green font-label-sm text-label-sm uppercase tracking-wider font-bold">
@@ -83,7 +83,7 @@ export default function AboutPage() {
 
       {/* SECTION 2: EDITORIAL ORIGIN STORY */}
       <section className="w-full py-space-xl bg-surface-container-low/30 border-y border-border-subtle/50">
-        <div className="max-w-5xl mx-auto px-gutter-lg">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-gutter-lg">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-space-xl items-center">
             {/* Left: Brand Crest & Quote */}
             <div className="md:col-span-5 flex flex-col gap-space-md">
@@ -140,7 +140,7 @@ export default function AboutPage() {
 
       {/* SECTION 3: FOUR GUIDING PRINCIPLES */}
       <section className="w-full py-margin-md bg-background">
-        <div className="max-w-5xl mx-auto px-gutter-lg flex flex-col gap-space-lg">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-gutter-lg flex flex-col gap-space-lg">
           <div className="flex flex-col gap-1">
             <span className="font-label-sm text-label-sm uppercase tracking-wider text-fairway-green font-bold">
               Our Standard
@@ -236,7 +236,7 @@ export default function AboutPage() {
 
       {/* SECTION 4: COMMUNITY IMPACT & TELEMETRY STATS */}
       <section className="w-full py-space-xl bg-surface-container-high/40 border-y border-border-subtle/50">
-        <div className="max-w-5xl mx-auto px-gutter-lg">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-gutter-lg">
           <div className="bg-surface-card rounded-2xl p-space-xl shadow-xs border border-border-subtle">
             <div className="text-center max-w-xl mx-auto mb-space-xl">
               <span className="text-primary font-label-sm text-label-sm uppercase tracking-widest block mb-space-xs font-bold">
@@ -341,7 +341,7 @@ export default function AboutPage() {
 
       {/* SECTION 5: DOWNLOAD CALLOUT BANNER */}
       <section className="w-full py-space-xl mb-space-xl">
-        <div className="max-w-5xl mx-auto px-gutter-lg">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 md:px-gutter-lg">
           <div className="relative overflow-hidden rounded-2xl bg-inverse-surface text-inverse-on-surface shadow-xl p-space-xl border border-white/10">
             {/* Topographic Decorative Vector */}
             <div
