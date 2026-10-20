@@ -353,8 +353,7 @@ export default function HomePage() {
             <div
               className="w-full h-80 rounded-xl bg-cover bg-center shadow-inner relative overflow-hidden"
               style={{
-                backgroundImage:
-                  "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdY9CNL8AC8CvcB5m1mMqiWwLlfdPZu4hlDtuq2aO5RnP964gV-HimPzprW6aStj82HnuFYR5QUQjZFpqAwD5OQHk09-yjH_8CoVlZtgn8OXfbJDXiuOdiKVQr3sUrL4j0di0HajmJCzTaEpUu00kRuOVxCmM4yEwaTZkHefbNaWfI68pSTzuyLAiHHke7pS9HSIT-MVX8ofhY_XwrlfUvuJiPu2atHDWPjwsy')",
+                backgroundImage: "url('/images/royal_st_georges.jpg')",
               }}
             >
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-inverse-surface text-inverse-on-surface px-space-md py-space-xs rounded-xl shadow-2xl flex items-center gap-space-sm backdrop-blur-sm">

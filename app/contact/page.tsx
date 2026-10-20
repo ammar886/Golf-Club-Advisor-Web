@@ -378,8 +378,7 @@ export default function ContactPage() {
               <div
                 className="bg-cover bg-center w-full h-full transform group-hover:scale-105 transition-transform duration-700"
                 style={{
-                  backgroundImage:
-                    "url('https://lh3.googleusercontent.com/aida-public/AB6AXuA5rbi2KIJzuW8v3755gIbXDyKbeXQ740tzfnkks5zvqU2sWxl1zmJlw_6fkMpY4QzL-LTj7l4iuKV3hlNgF1dMFb6ZlZAbDqOMhtzDEr9a4d0By9GvDi3JJrISAKbV4enAZZJN59wGKpMoi8PBwuIgR1ruGhUDYLcT_XIOSuSVnqr85m7cjPCFeaVZYCuG5QdZCBlXDH5Oqz1TXmb2FgWhysoMHyHkA8iy4cuy')",
+                  backgroundImage: "url('/images/links_field.jpg')",
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-inverse-surface/90 via-inverse-surface/30 to-transparent flex flex-col justify-end p-space-lg text-inverse-on-surface">

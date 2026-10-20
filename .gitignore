@@ -42,7 +42,6 @@ next-env.d.ts
 
 # stitch design source & generated assets
 /stitch_source/
-/public/images/
 DESIGN.md
 
 # one-off utility/migration scripts
